@@ -7559,6 +7559,15 @@ react@^16.4.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react@^16.9:
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
+  integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+
 read-cmd-shim@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-cmd-shim/-/read-cmd-shim-1.0.1.tgz#2d5d157786a37c055d22077c32c53f8329e91c7b"
@@ -8199,6 +8208,11 @@ simple-swizzle@^0.2.2:
 single-spa-angular1@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/single-spa-angular1/-/single-spa-angular1-2.7.0.tgz#365d70d02c61dfca18cd15ea8c87343f765ad98a"
+
+single-spa-react@^2.10.2:
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/single-spa-react/-/single-spa-react-2.10.2.tgz#5033d454a9299170e5cc086b07f319862ee459c7"
+  integrity sha512-8zOQJRDdZ5Uo7K2RutBiapKuNvlP9Sw3qeQYN1nhSvouc4M/NpIWA1VIsDkv4JUka7zG0eRd5CEbDYN6zz6lYA==
 
 single-spa-react@^2.8.1:
   version "2.8.1"

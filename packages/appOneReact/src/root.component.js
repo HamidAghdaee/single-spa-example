@@ -1,15 +1,25 @@
-import React from 'react';
-import { Provider, connect } from 'react-redux';
-import Counter from './counter';
-import reactLogo from '../assets/react-logo.png';
+import React from "react";
+import { Provider, connect } from "react-redux";
+import Counter from "./counter";
+import reactLogo from "../assets/react-logo.png";
+import Parcel from "single-spa-react/parcel";
 
 export default class Root extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      parcels: null,
       store: this.props.store,
       globalEventDistributor: this.props.globalEventDistributor
     };
+
+    SystemJS.import("/reactParcel/singleSpaEntry.js").then(result => {
+      this.setState({
+        parcels: result
+      });
+
+      console.log(result);
+    });
   }
 
   componentDidCatch(error, info) {
@@ -28,6 +38,14 @@ export default class Root extends React.Component {
             <Counter
               globalEventDistributor={this.state.globalEventDistributor}
             />
+            <div>
+              {this.state.parcels && (
+                <Parcel config={this.state.parcels.reactComponentParcel} />
+              )}
+              {/* {this.state.parcels && (
+                <Parcel config={this.state.parcels.reactComponentWithHooksParcel} />
+              )} */}
+            </div>
           </div>
         </Provider>
       );
