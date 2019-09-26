@@ -42,9 +42,11 @@ export default class Root extends React.Component {
               {this.state.parcels && (
                 <Parcel config={this.state.parcels.reactComponentParcel} />
               )}
-              {/* {this.state.parcels && (
-                <Parcel config={this.state.parcels.reactComponentWithHooksParcel} />
-              )} */}
+              {this.state.parcels && (
+                <Parcel
+                  config={this.state.parcels.reactComponentWithHooksParcel}
+                />
+              )}
             </div>
           </div>
         </Provider>

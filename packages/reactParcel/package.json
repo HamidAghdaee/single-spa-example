@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.9",
-    "react-dom": "^16.4.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "single-spa-react": "^2.8.1"
