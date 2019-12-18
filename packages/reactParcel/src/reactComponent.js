@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function() {
-  return <div>react component without hooks</div>;
+export default function(props) {
+  // console.log("props", JSON.stringify(props));
+  useEffect(() => {
+    console.log("onMount");
+  }, []);
+  return <div>react component without hooks {props.value} </div>;
 }

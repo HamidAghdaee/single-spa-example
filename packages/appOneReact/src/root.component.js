@@ -8,6 +8,7 @@ export default class Root extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      value: "off",
       parcels: null,
       store: this.props.store,
       globalEventDistributor: this.props.globalEventDistributor
@@ -22,6 +23,13 @@ export default class Root extends React.Component {
     });
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        value: "on"
+      });
+    }, 1000);
+  }
   componentDidCatch(error, info) {
     console.log(error, info);
   }
@@ -40,13 +48,17 @@ export default class Root extends React.Component {
             />
             <div>
               {this.state.parcels && (
-                <Parcel config={this.state.parcels.reactComponentParcel} />
-              )}
-              {this.state.parcels && (
                 <Parcel
-                  config={this.state.parcels.reactComponentWithHooksParcel}
+                  value={this.state.value}
+                  config={this.state.parcels.reactComponentParcel}
                 />
               )}
+              {/* {this.state.parcels && (
+                <Parcel
+                  value={this.state.value}
+                  config={this.state.parcels.reactComponentWithHooksParcel}
+                />
+              )} */}
             </div>
           </div>
         </Provider>

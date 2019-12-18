@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-export default function() {
+export default function(props) {
   const [count, setCount] = useState(0);
+  console.log("props", JSON.stringify(props));
 
   return (
     <div>
